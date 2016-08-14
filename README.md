@@ -1,2 +1,4 @@
-# scnewsletter-new
-The new version of the Software Craftsmanship Newsletter website
+# Software Craftsmanship Newsletter website (new version)
+This is a new version written in Go.
+
+## Work in progress!
