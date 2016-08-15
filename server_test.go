@@ -11,10 +11,9 @@ import (
 
 func TestHomePageHandler(t *testing.T) {
 	assert := assert.New(t)
-
+	res := httptest.NewRecorder()
 	mux := routing.NewMux()
 
-	res := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "/", nil)
 	mux.ServeHTTP(res, req)
 
