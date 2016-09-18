@@ -17,6 +17,17 @@ body, .content {
   padding-top:10px;
 }
 
+.jumbotron-contribute {
+  background:#953726 ;
+}
+.jumbotron-contribute {
+  background-color:#953726 ;
+  color:white;
+  margin-bottom:2px;
+  padding-bottom:30px;
+  padding-top:10px;
+}
+
 .jumbotron-footer {
   background:#143642;
 }

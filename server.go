@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	http.ListenAndServe(":3000", routing.NewMux())
+	http.ListenAndServe(":8080", routing.NewMux())
 }
