@@ -19,3 +19,14 @@ func TestHomePageHandler(t *testing.T) {
 
 	assert.Equal(res.Code, 200)
 }
+
+func ThankyouPageHandler(t *testing.T) {
+	assert := assert.New(t)
+	res := httptest.NewRecorder()
+	mux := routing.NewMux()
+
+	req, _ := http.NewRequest("GET", "/thankyou", nil)
+	mux.ServeHTTP(res, req)
+
+	assert.Equal(res.Code, 200)
+}

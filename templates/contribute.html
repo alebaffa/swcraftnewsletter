@@ -1,0 +1,23 @@
+{{define "contribute"}}
+	<footer id="footer" class="jumbotron-contribute">
+		<section class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-push-1">
+					<h3>Suggest a link for an upcoming issue</h3>
+					<form class="form-inline" data-toggle="validator" role="form" action="/submit" method="POST">
+						<div class="form-group has-feedback">
+							<div class="input-group">
+								<input type="text" size="70" class="form-control" id="link" name="link" placeholder="http://" required>
+							</div>
+							<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+					Links in each issue will be chosen by the curator.
+				</div>
+			</div>
+		</section>
+	</footer>
+{{end}}
