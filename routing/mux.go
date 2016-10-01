@@ -3,9 +3,10 @@ package routing
 import (
 	"net/http"
 
+	"html/template"
+
 	"github.com/alebaffa/newsletter-web/utils"
 	"github.com/gorilla/mux"
-	"html/template"
 )
 
 type Page struct {
@@ -40,7 +41,7 @@ func ContributeHandler(res http.ResponseWriter, req *http.Request) {
 
 }
 
-func thankYouHandler(res http.ResponseWriter, req *http.Request) {
+func ThankYouHandler(res http.ResponseWriter, req *http.Request) {
 	t, _ := template.ParseFiles(
 		"templates/thankyou.html",
 		"templates/header.html",
@@ -60,7 +61,7 @@ func NewMux() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/", HomePageHandler)
 	r.HandleFunc("/submit", ContributeHandler)
-	r.HandleFunc("/thankyou", thankYouHandler)
+	r.HandleFunc("/thankyou", ThankYouHandler)
 	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./assets/")))
 	return r
 }
