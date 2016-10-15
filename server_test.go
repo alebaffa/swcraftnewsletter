@@ -5,7 +5,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/alebaffa/newsletter-web/routing"
+	"github.com/alebaffa/swcraftnewsletter/routing"
 	"github.com/stretchr/testify/assert"
 )
 

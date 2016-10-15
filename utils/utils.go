@@ -3,7 +3,7 @@ package utils
 import (
 	"net/smtp"
 
-	"github.com/alebaffa/newsletter-web/private"
+	"github.com/alebaffa/swcraftnewsletter/private"
 )
 
 func SendEmail(link string) error {

@@ -5,7 +5,7 @@ import (
 
 	"html/template"
 
-	"github.com/alebaffa/newsletter-web/utils"
+	"github.com/alebaffa/swcraftnewsletter/utils"
 	"github.com/gorilla/mux"
 )
 

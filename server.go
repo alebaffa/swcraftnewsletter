@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/alebaffa/newsletter-web/routing"
+	"github.com/alebaffa/swcraftnewsletter/routing"
 )
 
 func main() {
