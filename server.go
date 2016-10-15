@@ -9,5 +9,5 @@ import (
 
 func main() {
 	port := os.Getenv("PORT")
-	http.ListenAndServe(port, routing.NewMux())
+	http.ListenAndServe(":"+port, routing.NewMux())
 }
