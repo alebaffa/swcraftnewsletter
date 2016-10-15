@@ -2,10 +2,12 @@ package main
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/alebaffa/swcraftnewsletter/routing"
 )
 
 func main() {
-	http.ListenAndServe(":8080", routing.NewMux())
+	port := os.Getenv("PORT")
+	http.ListenAndServe(port, routing.NewMux())
 }
