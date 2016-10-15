@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
-	port := os.Getenv("PORT")
+	port := os.Getenv("PORT") //heroku
+	//port := "8080"
 	http.ListenAndServe(":"+port, routing.NewMux())
 }

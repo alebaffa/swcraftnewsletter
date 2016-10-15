@@ -1,2 +1,2 @@
 # Software Craftsmanship Newsletter 
-[https://sc-newsletter.appspot.com/](https://sc-newsletter.appspot.com/)
+[http://www.softwarecraftsmanship.news/](http://www.softwarecraftsmanship.news/)
