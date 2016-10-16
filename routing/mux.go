@@ -5,7 +5,7 @@ import (
 
 	"html/template"
 
-	"github.com/alebaffa/swcraftnewsletter/utils"
+	"github.com/alebaffa/swcraftnewsletter/mail"
 	"github.com/gorilla/mux"
 )
 
@@ -33,7 +33,7 @@ func HomePageHandler(res http.ResponseWriter, req *http.Request) {
 func ContributeHandler(res http.ResponseWriter, req *http.Request) {
 	req.ParseForm()
 	link := req.Form["link"]
-	if err := utils.SendEmail(link[0]); err != nil {
+	if err := mail.Send(link[0]); err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
 		return
 	}

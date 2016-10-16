@@ -1,28 +1,25 @@
 package utils
 
 import (
-	"net/smtp"
-
-	"github.com/alebaffa/swcraftnewsletter/private"
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"os"
 )
 
-func SendEmail(link string) error {
-	email, password, smtpServer, port := private.GetParams()
+type Credential struct {
+	Mail     string `json:"email"`
+	Password string `json:"password"`
+}
 
-	auth := smtp.PlainAuth(
-		"",
-		email,
-		password,
-		smtpServer,
-	)
-	return smtp.SendMail(
-		smtpServer+":"+port,
-		auth,
-		"sender@email.com",
-		[]string{email},
-		[]byte("To: "+email+"\r\n"+
-			"Subject: New link for Software Craftsmanship Newsletter\r\n"+
-			"\r\n"+
-			link),
-	)
+func ReadCredentials() Credential {
+	file, err := ioutil.ReadFile("./credentials.json")
+	if err != nil {
+		fmt.Printf("File config read error: %v\n", err)
+		os.Exit(1)
+	}
+
+	var credentials Credential
+	json.Unmarshal(file, &credentials)
+	return credentials
 }
