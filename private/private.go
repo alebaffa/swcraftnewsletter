@@ -1,7 +1,7 @@
 package private
 
 func GetParams() (string, string, string, string) {
-	email := "alessandro.baffa@gmail.com"
+	email := "mail@test.com"
 	password := "fake"
 	smtpServer := "smtp.gmail.com"
 	port := "587"
