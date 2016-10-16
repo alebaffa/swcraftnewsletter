@@ -7,7 +7,7 @@
 
 - Change PORT in _server.go_
 
-# Deploy on Heroku
+## Deploy on Heroku
 
 - run _godep save ./..._ 
 - change the PORT (in case it's still on local test)
