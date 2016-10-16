@@ -1,10 +1,10 @@
 package mail
 
-import "github.com/alebaffa/swcraftnewsletter/utils"
+import "os"
 
 func Send(link string) error {
-	email := utils.ReadCredentials().Mail
-	password := utils.ReadCredentials().Password
+	email := os.Getenv("G_EMAIL")
+	password := os.Getenv("G_PASSW")
 
 	mailSender := NewSender(
 		Config{Username: email, Password: password, ServerHost: "smtp.gmail.com", ServerPort: "587", SenderAddr: ""})
