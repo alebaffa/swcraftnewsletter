@@ -1,7 +1,4 @@
 #!/bin/sh
-echo "execute tests..."
-go test
-
 echo "replace private..."
 cp private.go private/
 
