@@ -15,6 +15,7 @@ func TestEmailSentSuccessful(t *testing.T) {
 	//When
 	err := sender.SendMail([]string{to}, []byte(body))
 
+	//Then
 	if err != nil {
 		t.Errorf("unexpected error: %s", err)
 	}
